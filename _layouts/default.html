@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multi-Column Layouts</title>
+  <title>{{ page.title }}</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-  <script src="app.js"></script>
+  <script src="/assets/app.js"></script>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
   <div class="flex" ng-controller="MainCtrl">
@@ -31,13 +31,9 @@
 
     <!-- Main Content -->
     <div class="flex-1 p-6">
-      <div class="text-3xl font-bold mb-4">Dashboard</div>
+      <div class="text-3xl font-bold mb-4">{{ page.title }}</div>
       <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-2xl font-bold mb-4">Welcome to the Dashboard</h2>
-        <p class="mb-4">{{ message }}</p>
-        <div>
-          <!-- Add more content here -->
-        </div>
+        {{ content }}
       </div>
     </div>
   </div>
